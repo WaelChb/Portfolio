@@ -1,4 +1,7 @@
 <template>
+  <!-- <div id="preloader">
+    <div class="p">CHARGEMENT</div>
+</div> -->
   <div id="app">
     <router-view/>
   </div>
@@ -11,5 +14,9 @@ export default {
 </script>
 
 <style>
-/* Styles globaux */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;}
 </style>

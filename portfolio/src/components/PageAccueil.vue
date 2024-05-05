@@ -1,100 +1,75 @@
 <template>
-  <div class="accueil">
-    <header class="header">
-      <h1>Mon Portfolio</h1>
-      <nav>
-        <ul>
-          <li><router-link to="/">Accueil</router-link></li>
-          <li><router-link to="/projets">Projets</router-link></li>
-          <li><router-link to="/competences">Compétences</router-link></li>
-          <li><router-link to="/a-propos">À Propos</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
-        </ul>
-      </nav>
-    </header>
 
-    <div class="contenu">
-      <h2>Bienvenue sur mon Portfolio</h2>
-      <p>Découvrez mes projets, mes compétences et plus encore.</p>
-      <router-link to="/projets" class="btn">Voir mes projets</router-link>
-    </div>
-
-    <footer class="footer">
-      <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
-    </footer>
+  <div class="container">
+    <section class="one">
+      <NavigationBar  />
+      <AccueilContenu/>
+      
+      
+    </section>
+    <section class="two">
+      <h1>two</h1>
+    </section>
+    <section class="three">
+      <h1>three</h1>
+    </section>
   </div>
-</template>
 
-  <script>
-  export default {
-    name: 'PageAccueil'
+ </template>
+
+  
+<script>
+import NavigationBar from './NavigationBar.vue'; 
+import AccueilContenu from './AccueilContenu.vue'; 
+
+
+export default {
+  name: 'PageAccueil',
+  components: {
+    NavigationBar,
+    AccueilContenu
+    
   }
-  </script>
+}
+</script>
+
+
   
   <style scoped>
-  .header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+*{
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Poppins", sans-serif;
+  
+  }
+
+  header{
+    height: 100vh;
+    width: 100vh;
+
+  }
+.container{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
 }
 
-.header h1 {
-  margin: 0;
-}
-
-.header nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.header nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.contenu {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.contenu h2 {
-  font-size: 2.5em;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.contenu p {
-  font-size: 1.2em;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.1em;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
+  section{
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+  .one{
+    background-color: #191D24;
+  }
+  .two{
+    background-color: #072E33;
+  }
+  .three{
+    background-color: #05161A;
+  }
   </style>
   
