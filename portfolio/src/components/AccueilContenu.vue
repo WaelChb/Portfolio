@@ -1,12 +1,22 @@
 <template>
     <div class="container2">
+      <div class="titre">
+
         <h4>Bienvenue sur mon portfolio</h4>
         <h2>Wael Churbaji</h2>
         <h4>Concépteur développeur</h4>
+      </div>
         <div class="bouton">
-            <button class="button">
-            <span class="button-content">Télécharger mon cv </span>
-            </button>
+         <button class="button" @click="openDialog"><span class="button-content">Afficher mon cv </span></button>
+    <div class="blurer" id="blurer"></div>
+    <span id="dialog" class="dialog-window">
+          <span class="dialog-text">
+            <div class="image-container">
+            <img src="../assets/Cv_WaelChurbaji_Mastère-1.png"  alt="">
+          </div>
+          </span>
+          <button class="button" @click="closeDialog"><span class="button-content">Fermer</span></button>
+        </span>
 
             <button class="button">
             <span class="button-content">À Propos de moi</span>
@@ -28,21 +38,46 @@
           </div>
           <div class="flipcard">
             <FlipCard/>
-            
           </div> 
 
     </div>
 </template>
 
 <script>
-import FlipCard from './card.vue'; 
-export default{
+import FlipCard from './card.vue'; // Assurez-vous que le chemin d'importation est correct
+
+export default {
   name: 'AccueilContenu',
   components: {
     FlipCard
+  },
+  methods: {
+    openDialog() {
+      const dialog = document.getElementById('dialog');
+      const blurer = document.getElementById('blurer');
+      dialog.style.display = 'flex';
+      blurer.style.display = 'block';
+      setTimeout(function() {
+        dialog.style.opacity = '1';
+        blurer.style.opacity = '1';
+      }, 10);
+    },
+    closeDialog() {
+      const dialog = document.getElementById('dialog');
+      const blurer = document.getElementById('blurer');
+      dialog.style.opacity = '0';
+      blurer.style.opacity = '0';
+      setTimeout(function() {
+        dialog.style.display = 'none';
+        blurer.style.display = 'none';
+      }, 300); // Attendre la fin de la transition (0.3s = 300ms)
+    }
   }
-
 }
+
+  
+
+
 </script>
 
 <style>
@@ -61,13 +96,25 @@ h4, h2{
     text-align: center; 
     color: #fff;
 }
-
+.titre > * {
+  margin-bottom: 10px; /* ou toute autre valeur qui convient à votre mise en page */
+}
 .button {
   margin: 30px;
     margin-right: 20px; 
 }
 .button:last-child {
     margin-right: 0;
+}
+.image-container {
+  width: 750px; /* Largeur de la zone de défilement */
+  height: 600px; /* Hauteur de la zone de défilement */
+  overflow: auto; /* Déclenche le défilement lorsque l'image dépasse les dimensions */
+}
+
+.image-container img {
+  display: block; /* Assure que l'image est affichée en tant que bloc */
+  max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
 }
 
 .button {
@@ -82,6 +129,43 @@ h4, h2{
   border: none;
   cursor: pointer;
 }
+
+.blurer { z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    width: 100vw;
+    display: none;
+     opacity: 0; 
+    transition: opacity 0.3s ease; 
+    }
+    .dialog-window {
+        z-index: 10;
+        /* width: 350px; */
+        position: fixed;
+         top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        text-align: left;
+        opacity: 0; 
+    transition: opacity 0.3s ease;
+    }
+    .dialog-title {
+    margin-bottom: 20px; font-size: 2rem; font-weight: bold;
+    }
+    
+    .dialog-text{
+        margin-top: 0px;
+    }
+
 
 .button:hover::before {
   transform: scaleX(1);
@@ -104,8 +188,8 @@ h4, h2{
   border-radius: inherit;
   background: linear-gradient(
     82.3deg,
-    rgba(150, 93, 233, 1) 10.8%,
-    rgba(99, 88, 238, 1) 94.3%
+    rgba(	252, 186, 127) 10.8%,
+    rgba(249,154,84) 94.3%
   );
   transition: all 0.475s;
 }
@@ -145,7 +229,7 @@ h4, h2{
 
 .btn:hover svg {
   transform: scale(0.9);
-  fill: #f4e7fb;
+  fill:#feeeab;
 }
 
 

@@ -1,3 +1,8 @@
+<p>Je m'appelle Wael Churbaji, j'ai 23 ans. Depuis l'âge de 12 ans, je suis passionné par le développement informatique. J'ai obtenu un baccalauréat STI2D, suivi d'un BTS SIO avec une option en SLAM. Actuellement, je suis en licence professionnelle développeur web, avec une spécialisation en objets connectés.</p> 
+     
+
+
+
 <template>
   <div class="accueil">
     <header class="header">

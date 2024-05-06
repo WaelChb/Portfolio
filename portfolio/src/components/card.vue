@@ -3,12 +3,12 @@
 <div class="flip-card">
     <div class="flip-card-inner">
         <div class="flip-card-front">
-            <p class="title">WaelChb</p>
-            <p>test</p>
-        </div>
-        <div class="flip-card-back">
-            <p class="title">Developpeur</p>
-            <p>Web</p>
+            <p class="title">@WaelChb</p>
+          </div>
+          <div class="flip-card-back">
+            <p class="title">Développeur</p>
+            <br>
+            <p>Je suis un développeur passionné, constamment avide de nouvelles connaissances et de défis.</p>
         </div>
     </div>
 </div>

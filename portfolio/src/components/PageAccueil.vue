@@ -4,11 +4,9 @@
     <section class="one">
       <NavigationBar  />
       <AccueilContenu/>
-      
-      
     </section>
-    <section class="two">
-      <h1>two</h1>
+    <section class="two" ref="sectionTwo">
+      <APropos/>
     </section>
     <section class="three">
       <h1>three</h1>
@@ -21,13 +19,15 @@
 <script>
 import NavigationBar from './NavigationBar.vue'; 
 import AccueilContenu from './AccueilContenu.vue'; 
+import APropos from './APropos.vue'; 
 
 
 export default {
   name: 'PageAccueil',
   components: {
     NavigationBar,
-    AccueilContenu
+    AccueilContenu,
+    APropos
     
   }
 }
@@ -46,12 +46,13 @@ export default {
   
   }
 
+
   header{
     height: 100vh;
     width: 100vh;
 
   }
-.container{
+  .container{
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
@@ -66,7 +67,7 @@ export default {
     background-color: #191D24;
   }
   .two{
-    background-color: #072E33;
+    background-color: #191D24;
   }
   .three{
     background-color: #05161A;

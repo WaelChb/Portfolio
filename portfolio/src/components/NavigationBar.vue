@@ -1,13 +1,14 @@
 <template>
 
     <nav class="navbar">
-    <a href="#" class="logo">Portfolio</a>
+    <a href="#" class="logo">Portfolio <LoadImage></LoadImage></a>
+    
     <div class="nav-links">
       <ul>
         <li :class="{ active: activeTab === 'accueil' }"><a href="#" @click="setActiveTab('accueil')">Accueil</a></li>
-      <li :class="{ active: activeTab === 'projets' }"><router-link to="/projets" @click="setActiveTab('projets')">Projets</router-link></li>
+        <li :class="{ active: activeTab === 'a-propos' }"><a href="#" @click="setActiveTab('a-propos')">À Propos</a></li>
+      <li :class="{ active: activeTab === 'projets' }"><a href="#" @click="setActiveTab('projets')">Projets</a></li>
       <li :class="{ active: activeTab === 'competences' }"><a href="#" @click="setActiveTab('competences')">Compétences</a></li>
-      <li :class="{ active: activeTab === 'a-propos' }"><a href="#" @click="setActiveTab('a-propos')">À Propos</a></li>
       <li :class="{ active: activeTab === 'contact' }"><a href="#" @click="setActiveTab('contact')">Contact</a></li>
       </ul>
     </div>
@@ -18,8 +19,15 @@
 
 <script>
 
+import LoadImage from './load.vue';  
 export default{
+
+ 
+
   name: 'NavigationBar',
+  components: {
+    LoadImage
+  },
 
   data() {
     return {
@@ -31,7 +39,6 @@ export default{
       this.activeTab = tabName;
     }
   },
-
     mounted() {
     const menuHamburger = document.querySelector(".menu-hamburger")
         const navLinks = document.querySelector(".nav-links")
@@ -85,7 +92,7 @@ nav .logo {
 
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 972px){
   .navbar{
     padding: 0;
   }
