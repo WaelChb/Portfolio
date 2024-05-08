@@ -11,7 +11,7 @@
                       <p class="info">
                       Je m'appelle Wael Churbaji, j'ai 23 ans. Depuis l'âge de 12 ans, je suis passionné par le développement informatique.<br><br> J'ai obtenu un baccalauréat STI2D, suivi d'un BTS SIO option en SLAM.<br><br> Actuellement, je suis en licence professionnelle développeur web, avec une spécialisation en objets connectés.</p> 
  
-                <button>Resume</button>
+                <button></button>
         </div>
 
         <div class="passion">
@@ -25,11 +25,12 @@
                   </div>
                 </div>
               </div>
-              
+            </div>
+            <div class="test">
+              az
+            </div>
           </div>
-          
-        </div>
-  </div>
+</div>
   </template>
   
   <script>
@@ -62,17 +63,11 @@
     flex-direction: column;
     align-items: center;
   }
-  .contenu{
-     display: flex;
-        justify-content: space-between;
-        gap: 40px; 
-  }
+
 .img-center{
-
-display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
-
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
  }
 
 
@@ -80,9 +75,16 @@ display: flex;
     margin-top: 100px;
   }
 
-.passion{
-  display: flex;
-  flex-wrap: wrap;
+  .passion {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.contenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
 }
 
   .card {
@@ -131,14 +133,6 @@ display: flex;
 img{
   border-radius: 15px;
 }
-.card a {
-  color: white;
-  transition: 0.4s ease-in-out;
-}
-
-.card a:hover {
-  color: red;
-}
 
 .card button {
   padding: 0.8em 1.7em;
@@ -147,16 +141,11 @@ img{
   border-radius: 25px;
   border: none;
   font-weight: bold;
-  background: #ffffff;
+  background: rgb(255, 255, 255) 94.3%;
   color: rgb(0, 0, 0);
   transition: 0.4s ease-in-out;
 }
 
-.card button:hover {
-  background: rgba(249,154,84) 94.3%;
-  color: black;
-  cursor: pointer;
-}
 
 
 .main_card {

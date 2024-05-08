@@ -13,6 +13,7 @@
     "jquery": "^3.7.1",
     "pace-js": "^1.2.4",
     "vue": "^3.2.13",
+    "vue-preloader": "^1.1.4",
     "vue-router": "^4.3.0",
     "vuex": "^4.1.0"
   },
