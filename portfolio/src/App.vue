@@ -3,20 +3,21 @@
     <div class="p">CHARGEMENT</div>
 </div> -->
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+};
 </script>
 
 <style>
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
 </style>

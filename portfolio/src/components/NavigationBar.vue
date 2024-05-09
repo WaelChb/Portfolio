@@ -1,63 +1,65 @@
 <template>
-
-    <nav class="navbar">
+  <nav class="navbar">
     <a href="#" class="logo">Portfolio <LoadImage></LoadImage></a>
-    
+
     <div class="nav-links">
       <ul>
-        <li :class="{ active: activeTab === 'accueil' }"><a href="#" @click="setActiveTab('accueil')">Accueil</a></li>
-        <li :class="{ active: activeTab === 'a-propos' }"><a href="#" @click="setActiveTab('a-propos')">À Propos</a></li>
-      <li :class="{ active: activeTab === 'projets' }"><a href="#" @click="setActiveTab('projets')">Projets</a></li>
-      <li :class="{ active: activeTab === 'competences' }"><a href="#" @click="setActiveTab('competences')">Compétences</a></li>
-      <li :class="{ active: activeTab === 'contact' }"><a href="#" @click="setActiveTab('contact')">Contact</a></li>
+        <li :class="{ active: activeTab === 'accueil' }">
+          <a href="#" @click="setActiveTab('accueil')">Accueil</a>
+        </li>
+        <li :class="{ active: activeTab === 'a-propos' }">
+          <a href="#two" @click="setActiveTab('a-propos')">À Propos</a>
+        </li>
+        <li :class="{ active: activeTab === 'projets' }">
+          <a href="#" @click="setActiveTab('projets')">Projets</a>
+        </li>
+        <li :class="{ active: activeTab === 'competences' }">
+          <a href="#" @click="setActiveTab('competences')">Compétences</a>
+        </li>
+        <li :class="{ active: activeTab === 'contact' }">
+          <a href="#" @click="setActiveTab('contact')">Contact</a>
+        </li>
       </ul>
     </div>
-    <img src="../assets/menu-btn.png" class="menu-hamburger">
+    <img src="../assets/menu-btn.png" class="menu-hamburger" />
   </nav>
-
 </template>
 
 <script>
-
-import LoadImage from './load.vue';  
-export default{
-
- 
-
-  name: 'NavigationBar',
+import LoadImage from "./load.vue";
+export default {
+  name: "NavigationBar",
   components: {
-    LoadImage
+    LoadImage,
   },
 
   data() {
     return {
-      activeTab: 'accueil' // Par défaut, l'onglet Accueil est actif
+      activeTab: "accueil", // Par défaut, l'onglet Accueil est actif
     };
   },
   methods: {
     setActiveTab(tabName) {
       this.activeTab = tabName;
-    }
+    },
   },
-    mounted() {
-    const menuHamburger = document.querySelector(".menu-hamburger")
-        const navLinks = document.querySelector(".nav-links")
- 
-        menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile-menu')
-        })
-  }
+  mounted() {
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-}
-
+    menuHamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-menu");
+    });
+  },
+};
 </script>
 
 <style>
-.navbar{
+.navbar {
   padding: 50px;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
 }
 .navbar a {
   color: white;
@@ -66,23 +68,23 @@ export default{
 nav .logo {
   font-size: 3em;
   height: 100px;
-    width: auto;
-    margin-right: 10px;
-    border-radius: 5px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 5px;
 }
 
-.navbar .nav-links ul{
+.navbar .nav-links ul {
   display: flex;
 }
-.navbar .nav-links ul li{
+.navbar .nav-links ul li {
   margin: 0 25px;
 }
 
-.navbar .nav-links ul li.active a{
-  color: #FDD995;
+.navbar .nav-links ul li.active a {
+  color: #fdd995;
   font-weight: 600;
 }
-.navbar .menu-hamburger{
+.navbar .menu-hamburger {
   display: none;
   position: absolute;
   top: 50px;
@@ -90,27 +92,25 @@ nav .logo {
   width: 40px;
 }
 
-
-
-@media screen and (max-width: 972px){
-  .navbar{
+@media screen and (max-width: 972px) {
+  .navbar {
     padding: 0;
   }
   nav .logo img {
     position: absolute;
-  top: 50px;
-  left: 50px; 
-}
-  .navbar .menu-hamburger{
-    display: block;
-   margin-top: 60px;
-   margin-right: 20px;
+    top: 50px;
+    left: 50px;
   }
-  .nav-links{
+  .navbar .menu-hamburger {
+    display: block;
+    margin-top: 60px;
+    margin-right: 20px;
+  }
+  .nav-links {
     top: 0;
     left: 0;
     position: absolute;
-    background-color: rgb(255, 255, 255, 0.200);
+    background-color: rgb(255, 255, 255, 0.2);
     backdrop-filter: 7px;
     width: 100%;
     height: 100vh;
@@ -119,20 +119,18 @@ nav .logo {
     align-items: center;
     margin-left: -100%;
     transition: all 0.5s ease;
-    
   }
-  .nav-links.mobile-menu{
-  margin-left: 0;
-}
+  .nav-links.mobile-menu {
+    margin-left: 0;
+  }
 
-  .navbar .nav-links ul li{
-  margin: 25px 0;
-}
-  .nav-links ul{
+  .navbar .nav-links ul li {
+    margin: 25px 0;
+  }
+  .nav-links ul {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-
 </style>

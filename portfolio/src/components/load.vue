@@ -1,21 +1,19 @@
 <template>
-<div class="honeycomb">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-
+  <div class="honeycomb">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </template>
 
 <script>
-export default{
-  name: 'LoadImage'
-
-}
+export default {
+  name: "LoadImage",
+};
 </script>
 
 <style>
@@ -73,8 +71,9 @@ export default{
   width: 24px;
 }
 
-.honeycomb div:after, .honeycomb div:before {
-  content: '';
+.honeycomb div:after,
+.honeycomb div:before {
+  content: "";
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   position: absolute;
