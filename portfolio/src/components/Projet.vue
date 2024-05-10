@@ -5,14 +5,29 @@
       <br />
       <br />
     </div>
-    <section>
-      <div class="contenu2">
-        <div class="card" v-for="(card, index) in cards" :key="index">
+    <section class="scroll">
+      <div class="contenu2" ref="scrollContent">
+        <div class="card3" v-for="(card, index) in cards" :key="index">
           <div class="card-image"></div>
           <p class="card-title">{{ card.title }}</p>
-          <p class="card-body">{{ card.body }}</p>
+          <p v-html="card.body"></p>
         </div>
       </div>
+      <button class="scroll-button left" @click="scrollLeft">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/271/271220.png"
+          alt="Left Arrow"
+          width="10px"
+        />
+      </button>
+      <br />
+      <button class="scroll-button right" @click="scrollRight">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/566/566093.png"
+          alt="Right Arrow"
+          width="10px"
+        />
+      </button>
     </section>
   </div>
 </template>
@@ -25,7 +40,7 @@ export default {
       cards: [
         {
           title: "Filtre Web:  ",
-          body: "",
+          body: "Je vis tres loin d'ici et j'ai <br>",
         },
         {
           title: "Card title",
@@ -33,7 +48,7 @@ export default {
         },
         {
           title: "Card title",
-          body: "lorem",
+          body: "lore3m",
         },
         {
           title: "Card title",
@@ -66,6 +81,37 @@ export default {
       ],
     };
   },
+  methods: {
+    scrollLeft() {
+      const scrollContent = this.$refs.scrollContent;
+      if (scrollContent) {
+        const currentScrollLeft = scrollContent.scrollLeft;
+        const scrollStep = 400; // Ajustez la vitesse de défilement selon vos besoins
+        const newScrollLeft = currentScrollLeft - scrollStep;
+        this.scrollTo(scrollContent, newScrollLeft, 500); // 500 est la durée de l'animation en millisecondes
+      }
+    },
+    scrollRight() {
+      const scrollContent = this.$refs.scrollContent;
+      if (scrollContent) {
+        const currentScrollLeft = scrollContent.scrollLeft;
+        const scrollStep = 400; // Ajustez la vitesse de défilement selon vos besoins
+        const newScrollLeft = currentScrollLeft + scrollStep;
+        this.scrollTo(scrollContent, newScrollLeft, 500); // 500 est la durée de l'animation en millisecondes
+      }
+    },
+    scrollTo(element, to, duration) {
+      if (duration <= 0) return;
+      const difference = to - element.scrollLeft;
+      const perTick = (difference / duration) * 10;
+
+      setTimeout(() => {
+        element.scrollLeft = element.scrollLeft + perTick;
+        if (element.scrollLeft === to) return;
+        this.scrollTo(element, to, duration - 10);
+      }, 10);
+    },
+  },
 };
 </script>
 
@@ -78,10 +124,44 @@ export default {
   margin-left: auto;
   padding-right: 350px;
   padding-left: 350px;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.scroll {
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px;
+}
+
+.scroll-button {
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.scroll-button.left {
+  left: 0;
+}
+
+.scroll-button.right {
+  right: 0;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 1px; /* Largeur de la barre de défilement */
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: #191d24; /* Couleur de l'arrière-plan de la piste */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la poignée de défilement */
+  border-radius: 5px; /* Arrondi de la poignée */
 }
 .title2 {
   margin-top: 100px;
@@ -95,10 +175,13 @@ h3 {
   display: flex;
   justify-content: space-between;
   gap: 40px;
+  width: 100%;
+  padding: 20px;
+  overflow-x: scroll;
 }
 
-.card {
-  padding: 5px;
+.card3 {
+  padding: 35px;
   width: 200px;
   border-radius: 20px;
   background: #212121;
@@ -106,7 +189,7 @@ h3 {
   transition: 0.4s;
 }
 
-.card:hover {
+.card3:hover {
   translate: 0 -10px;
 }
 
@@ -114,7 +197,7 @@ h3 {
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
-  margin: 15px 0 0 10px;
+  margin: 5px;
 }
 
 .card-image {
@@ -126,8 +209,16 @@ h3 {
 }
 
 .card-body {
-  margin: 13px 0 0 10px;
+  margin: 3px;
   color: rgb(184, 184, 184);
   font-size: 15px;
+}
+
+@media screen and (max-width: 1366px) {
+  .scroll {
+    white-space: nowrap;
+    width: 200%;
+    padding: 10px;
+  }
 }
 </style>
