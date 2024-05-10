@@ -89,15 +89,13 @@ export default {
   transform: rotateY(180deg);
 }
 
-
-@media screen and (max-width: 1366px) { 
+@media screen and (max-width: 1366px) {
   .flip-card {
-  background-color: transparent;
-  width: 190px;
-  height: 240px;
-  perspective: 1000px;
-  font-family: sans-serif;
+    background-color: transparent;
+    width: 190px;
+    height: 240px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
 }
-  
- }
 </style>

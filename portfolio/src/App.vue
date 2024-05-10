@@ -20,4 +20,17 @@ export default {
   text-decoration: none;
   list-style: none;
 }
+
+::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+}
+
+::-webkit-scrollbar-track {
+  background: #191d24; /* Couleur de l'arrière-plan de la piste */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la poignée de défilement */
+  border-radius: 5px; /* Arrondi de la poignée */
+}
 </style>

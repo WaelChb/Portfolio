@@ -4,11 +4,11 @@
       <NavigationBar />
       <AccueilContenu />
     </section>
-    <section class="two" ref="sectionTwo">
+    <section class="two">
       <APropos />
     </section>
     <section class="three">
-      <h1>three</h1>
+      <ProjetListe />
     </section>
   </div>
 </template>
@@ -17,6 +17,7 @@
 import NavigationBar from "./NavigationBar.vue";
 import AccueilContenu from "./AccueilContenu.vue";
 import APropos from "./APropos.vue";
+import ProjetListe from "./Projet.vue";
 
 export default {
   name: "PageAccueil",
@@ -24,6 +25,7 @@ export default {
     NavigationBar,
     AccueilContenu,
     APropos,
+    ProjetListe,
   },
 };
 </script>
@@ -60,6 +62,6 @@ section {
   background-color: #191d24;
 }
 .three {
-  background-color: #05161a;
+  background-color: #191d24;
 }
 </style>

@@ -116,14 +116,6 @@ export default {
   gap: 40px;
 }
 
-.test {
-  inset: 0;
-  background: #171717;
-  width: 80%;
-  margin: 10px auto;
-  border-radius: 15px;
-}
-
 .card {
   margin-top: 11px;
   width: 19em;
@@ -244,52 +236,52 @@ img {
   box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
 }
 
-@media screen and (max-width: 1366px) { 
+@media screen and (max-width: 1366px) {
   .main_card {
-  position: relative;
-  width: 79px;
-  height: 90px;
-  border-radius: 30px;
-  overflow: hidden;
-  margin: 10px;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -2px -2px 3px -1px rgba(75, 71, 71, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-P{
-  padding-top: 7px;
-  font-size: 13px;
-}
+    position: relative;
+    width: 77px;
+    height: 90px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+      -2px -2px 3px -1px rgba(75, 71, 71, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  P {
+    padding-top: 7px;
+    font-size: 13px;
+  }
 
-.card {
-  margin-top: 11px;
-  width: 19em;
-  height: 24.7em;
-  background: #171717;
-  transition: 1s ease-in-out;
-  -webkit-clip-path: polygon(
-    30px 0%,
-    100% 0,
-    100% calc(100% - 30px),
-    calc(100% - 30px) 100%,
-    0 100%,
-    0% 30px
-  );
-  clip-path: polygon(
-    30px 0%,
-    100% 0,
-    100% calc(100% - 30px),
-    calc(100% - 30px) 100%,
-    0 100%,
-    0% 30px
-  );
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -2px -2px 3px -1px rgba(75, 71, 71, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0);
+  .card {
+    margin-top: 11px;
+    width: 19em;
+    height: 24.7em;
+    background: #171717;
+    transition: 1s ease-in-out;
+    -webkit-clip-path: polygon(
+      30px 0%,
+      100% 0,
+      100% calc(100% - 30px),
+      calc(100% - 30px) 100%,
+      0 100%,
+      0% 30px
+    );
+    clip-path: polygon(
+      30px 0%,
+      100% 0,
+      100% calc(100% - 30px),
+      calc(100% - 30px) 100%,
+      0 100%,
+      0% 30px
+    );
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+      -2px -2px 3px -1px rgba(75, 71, 71, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
 }
- }
 </style>

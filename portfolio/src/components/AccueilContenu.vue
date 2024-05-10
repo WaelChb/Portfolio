@@ -100,8 +100,8 @@ export default {
 <style>
 .container2 {
   margin-right: auto;
-  margin-top: 10px;
   margin-left: auto;
+  margin-top: 10px;
   padding-right: 350px;
   padding-left: 350px;
   width: 100%;
@@ -251,18 +251,17 @@ h2 {
   fill: #feeeab;
 }
 
-@media screen and (max-width: 1366px) { 
+@media screen and (max-width: 1366px) {
   .container2 {
-  margin-right: auto;
-  margin-top: -70px;
-  margin-left: 30px;
-  padding-right: 350px;
-  padding-left: 350px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin-right: auto;
+    margin-top: -70px;
+    margin-left: auto;
+    padding-right: 350px;
+    padding-left: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
- }
-
 </style>
