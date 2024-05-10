@@ -5,13 +5,15 @@
       <br />
       <br />
     </div>
-    <div class="contenu">
-      <div class="card" v-for="(card, index) in cards" :key="index">
-        <div class="card-image"></div>
-        <p class="card-title">{{ card.title }}</p>
-        <p class="card-body">{{ card.body }}</p>
+    <section>
+      <div class="contenu2">
+        <div class="card" v-for="(card, index) in cards" :key="index">
+          <div class="card-image"></div>
+          <p class="card-title">{{ card.title }}</p>
+          <p class="card-body">{{ card.body }}</p>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -22,7 +24,35 @@ export default {
     return {
       cards: [
         {
-          title: "Card ",
+          title: "Filtre Web:  ",
+          body: "",
+        },
+        {
+          title: "Card title",
+          body: "lorem",
+        },
+        {
+          title: "Card title",
+          body: "lorem",
+        },
+        {
+          title: "Card title",
+          body: "lorem",
+        },
+        {
+          title: "Card title",
+          body: "lorem",
+        },
+        {
+          title: "Card title",
+          body: "lorem",
+        },
+        {
+          title: "Card title",
+          body: "lorem",
+        },
+        {
+          title: "Card title",
           body: "lorem",
         },
         {
@@ -61,7 +91,7 @@ h3 {
   font-size: 30px;
 }
 
-.contenu {
+.contenu2 {
   display: flex;
   justify-content: space-between;
   gap: 40px;
