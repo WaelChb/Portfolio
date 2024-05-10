@@ -255,7 +255,7 @@ h2 {
   .container2 {
   margin-right: auto;
   margin-top: -70px;
-  margin-left: auto;
+  margin-left: 30px;
   padding-right: 350px;
   padding-left: 350px;
   width: 100%;
