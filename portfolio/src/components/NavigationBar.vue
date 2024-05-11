@@ -8,7 +8,7 @@
           <a href="#" @click="setActiveTab('accueil')">Accueil</a>
         </li>
         <li :class="{ active: activeTab === 'a-propos' }">
-          <a href="#two" @click="setActiveTab('a-propos')">À Propos</a>
+          <a href="#" @click="setActiveTab('a-propos')">À Propos</a>
         </li>
         <li :class="{ active: activeTab === 'projets' }">
           <a href="#" @click="setActiveTab('projets')">Projets</a>

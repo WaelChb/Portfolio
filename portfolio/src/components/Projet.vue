@@ -44,7 +44,7 @@ export default {
         },
         {
           title: "Card title",
-          body: "lorem",
+          body: "lorem test",
         },
         {
           title: "Card title",
