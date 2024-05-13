@@ -22,15 +22,15 @@ export default {
 }
 
 ::-webkit-scrollbar {
-  width: 10px; /* Largeur de la barre de défilement */
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #191d24; /* Couleur de l'arrière-plan de la piste */
+  background: #191d24;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; /* Couleur de la poignée de défilement */
-  border-radius: 5px; /* Arrondi de la poignée */
+  background: #888;
+  border-radius: 5px;
 }
 </style>

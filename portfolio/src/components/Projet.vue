@@ -6,28 +6,53 @@
       <br />
     </div>
     <section class="scroll">
+      <div class="chevron">
+        <button class="scroll-button left" @click="scrollLeft">
+          <img
+            class="tourne"
+            src="https://www.nicepng.com/png/full/246-2461230_fleche-gauche-fleche-droite-carroubot1-carroubot2-flche-blanche.png"
+            alt="Left Arrow"
+            width="25px"
+          />
+        </button>
+        <button class="scroll-button right" @click="scrollRight">
+          <img
+            src="https://www.nicepng.com/png/full/246-2461230_fleche-gauche-fleche-droite-carroubot1-carroubot2-flche-blanche.png"
+            alt="Right Arrow"
+            width="25px"
+          />
+        </button>
+      </div>
       <div class="contenu2" ref="scrollContent">
         <div class="card3" v-for="(card, index) in cards" :key="index">
-          <div class="card-image"></div>
+          <div class="card-image">
+            <img
+              :src="card.img"
+              :width="card.width"
+              :height="card.height"
+              alt=""
+              style="border-radius: 5px"
+            />
+          </div>
           <p class="card-title">{{ card.title }}</p>
           <p v-html="card.body"></p>
+          <div class="card__links">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+                class="svg"
+              >
+                &lt;
+                <path
+                  d="M562.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L405.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C189.5 251.2 196 330 246 380c56.5 56.5 148 56.5 204.5 0L562.8 267.7zM43.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C57 372 57 321 88.5 289.5L200.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C416.5 260.8 410 182 360 132c-56.5-56.5-148-56.5-204.5 0L43.2 244.3z"
+                ></path>
+              </svg>
+              <a class="link" :href="card.link">Lien du projet</a>
+            </div>
+          </div>
         </div>
       </div>
-      <button class="scroll-button left" @click="scrollLeft">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/271/271220.png"
-          alt="Left Arrow"
-          width="10px"
-        />
-      </button>
-      <br />
-      <button class="scroll-button right" @click="scrollRight">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/566/566093.png"
-          alt="Right Arrow"
-          width="10px"
-        />
-      </button>
     </section>
   </div>
 </template>
@@ -40,43 +65,36 @@ export default {
       cards: [
         {
           title: "Filtre Web:  ",
-          body: "Je vis tres loin d'ici et j'ai <br>",
+          body: "Projet professionnel réalisé <br>en C# .net MVC5 et <br>Entity FrameWork, Filtre Web <br>est une application web <br>destiné aux opérateurs de <br> chez phtalmic Compagnie",
+          img: "https://i.ibb.co/1f7CCF9/Image1.jpg",
+          link: "https://github.com/WaelChb/Filtre",
+          height: "138px",
+          width: "200px",
         },
         {
-          title: "Card title",
+          title: "Portfolio",
           body: "lorem test",
+          img: "../assets/image.jpg",
         },
         {
-          title: "Card title",
+          title: "Uber Eats",
           body: "lore3m",
+          img: "../assets/image.jpg",
+        },
+        {
+          title: "Baby Foot Connecté",
+          body: "lorem",
+          img: "../assets/image.jpg",
         },
         {
           title: "Card title",
           body: "lorem",
+          img: "../assets/image.jpg",
         },
         {
           title: "Card title",
           body: "lorem",
-        },
-        {
-          title: "Card title",
-          body: "lorem",
-        },
-        {
-          title: "Card title",
-          body: "lorem",
-        },
-        {
-          title: "Card title",
-          body: "lorem",
-        },
-        {
-          title: "Card title",
-          body: "lorem",
-        },
-        {
-          title: "Card title",
-          body: "lorem",
+          img: "../assets/image.jpg",
         },
       ],
     };
@@ -129,6 +147,17 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
+.tourne {
+  transform: rotate(180deg);
+}
+
+.chevron {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 45px;
+}
+
 .scroll {
   white-space: nowrap;
   width: 100%;
@@ -152,17 +181,35 @@ export default {
 }
 
 .scroll::-webkit-scrollbar {
-  width: 1px; /* Largeur de la barre de défilement */
+  width: 1px;
 }
 
 .scroll::-webkit-scrollbar-track {
-  background: #191d24; /* Couleur de l'arrière-plan de la piste */
+  background: #191d24;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background: #888; /* Couleur de la poignée de défilement */
-  border-radius: 5px; /* Arrondi de la poignée */
+  background: #888;
+  border-radius: 5px;
 }
+
+.svg {
+  width: 25px;
+  height: 25px;
+  transform: translateY(25%);
+  fill: var(--font-color);
+}
+
+.card__links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.card__links .link:hover {
+  text-decoration: underline;
+}
+
 .title2 {
   margin-top: 100px;
 }
@@ -196,12 +243,12 @@ h3 {
 .card-title {
   font-size: 18px;
   font-weight: 600;
-  color: #ffffff;
+  color: #fdd995;
   margin: 5px;
 }
 
 .card-image {
-  min-height: 140px;
+  height: 140px;
   background-color: #313131;
   border-radius: 15px;
   background: #313131;

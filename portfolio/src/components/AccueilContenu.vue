@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import FlipCard from "./card.vue"; // Assurez-vous que le chemin d'importation est correct
+import FlipCard from "./card.vue";
 
 export default {
   name: "AccueilContenu",
@@ -115,7 +115,7 @@ h2 {
   color: #fff;
 }
 .titre > * {
-  margin-bottom: 10px; /* ou toute autre valeur qui convient à votre mise en page */
+  margin-bottom: 10px;
 }
 .button {
   margin: 30px;
@@ -125,14 +125,27 @@ h2 {
   margin-right: 0;
 }
 .image-container {
-  width: 750px; /* Largeur de la zone de défilement */
-  height: 600px; /* Hauteur de la zone de défilement */
-  overflow: auto; /* Déclenche le défilement lorsque l'image dépasse les dimensions */
+  width: 750px;
+  height: 600px;
+  overflow: auto;
+}
+.image-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.image-container::-webkit-scrollbar-track {
+  background: #191d24;
+  border-radius: 5px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
 }
 
 .image-container img {
-  display: block; /* Assure que l'image est affichée en tant que bloc */
-  max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
+  display: block;
+  max-width: 100%;
 }
 
 .button {
