@@ -38,14 +38,18 @@
         </div>
       </section>
     </div>
+    <br />
+    <CarouselVue></CarouselVue>
   </div>
 </template>
 
 <script>
 import DescriptionAPropos from "./Description.vue";
+import CarouselVue from "./Carousel.vue";
 export default {
   components: {
     DescriptionAPropos,
+    CarouselVue,
   },
 
   name: "APropos",

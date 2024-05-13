@@ -31,7 +31,7 @@
               :width="card.width"
               :height="card.height"
               alt=""
-              style="border-radius: 5px"
+              style="border-radius: 10px"
             />
           </div>
           <p class="card-title">{{ card.title }}</p>
@@ -91,16 +91,17 @@ export default {
           title: "Baby Foot Connecté:",
           body: "Le projet de baby-foot <br>connecté est un projet <br>scolaire développé en <br>Node.js pour l'api et pour le<br> coté objet connécté en <br>Arduino.",
           link: "https://github.com/WaelChb/Baby-Foot-Connecte/tree/Wael",
+          img: "https://i.ibb.co/PMjGcQs/Capture.png",
+          height: "140px",
+          width: "200px",
         },
         {
-          title: "Card title",
-          body: "lorem",
-          img: "../assets/image.jpg",
-        },
-        {
-          title: "Card title",
-          body: "lorem",
-          img: "../assets/image.jpg",
+          title: "Licence développeur:",
+          body: "Le projet de fin d'études de <br>2024 est une plateforme web <br>dynamique et interactive <br>dédiée à mettre en valeur les <br>compétences et les <br>réalisations des étudiants",
+          img: "https://i.ibb.co/zmNRmfK/Capture.png",
+          link: "https://github.com/WaelChb/LPWD-2024-Web-Project",
+          height: "140px",
+          width: "200px",
         },
       ],
     };
