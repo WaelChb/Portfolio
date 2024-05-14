@@ -21,7 +21,7 @@
         </button>
       </span>
 
-      <button class="button">
+      <button class="button" @click="scrollToAPropos">
         <span class="button-content">À Propos de moi</span>
       </button>
     </div>
@@ -92,6 +92,10 @@ export default {
         dialog.style.display = "none";
         blurer.style.display = "none";
       }, 300); // Attendre la fin de la transition (0.3s = 300ms)
+    },
+    scrollToAPropos() {
+      const aProposSection = document.getElementById("a-propos");
+      aProposSection.scrollIntoView({ behavior: "smooth" });
     },
   },
 };
@@ -233,6 +237,9 @@ h2 {
 
 .flipcard {
   margin-top: -230px;
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 20px; */
 }
 
 .btn {

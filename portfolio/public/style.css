@@ -1,7 +1,7 @@
 .pace {
   pointer-events: none;
   user-select: none;
-  z-index: 2000;
+  z-index: 3000;
   position: fixed;
   margin: auto;
   top: 0;
@@ -12,7 +12,7 @@
   border: 0px;
   height: 1px;
   overflow: hidden;
-  background: #1b1b1b;
+  /* background: #1b1b1b; */
 }
 
 .pace .pace-progress {
@@ -20,14 +20,14 @@
   transform: translate3d(0, 0, 0);
   max-width: 400px;
   position: fixed;
-  z-index: 2000;
+  z-index: 3000;
   display: block;
   position: absolute;
   top: 0;
   right: 100%;
   height: 100%;
   width: 100%;
-  background: grey;
+  /* background: grey; */
 }
 
 .pace.pace-inactive {
@@ -36,6 +36,7 @@
 
 #preloader {
   width: 100%;
+  z-index: 2000;
   height: 100vh;
   background: #101010;
   overflow: hidden;
@@ -46,6 +47,7 @@
 .p {
   position: absolute;
   top: 40%;
+  z-index: 3000;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;

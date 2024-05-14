@@ -1,6 +1,6 @@
 <template>
   <div class="container3">
-    <div class="title">
+    <div class="titleee">
       <h3>À Propos</h3>
       <br />
     </div>
@@ -104,7 +104,7 @@ export default {
   align-items: center;
 }
 
-.title {
+.titleee {
   margin-top: 100px;
 }
 

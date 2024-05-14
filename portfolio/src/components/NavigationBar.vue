@@ -4,19 +4,21 @@
 
     <div class="nav-links">
       <ul>
-        <li :class="{ active: activeTab === 'accueil' }">
-          <a href="#" @click="setActiveTab('accueil')">Accueil</a>
+        <li>
+          <a href="#accueil" @click="setActiveTab('accueil')">Accueil</a>
         </li>
-        <li :class="{ active: activeTab === 'a-propos' }">
-          <a href="#" @click="setActiveTab('a-propos')">À Propos</a>
+        <li>
+          <a href="#a-propos" @click="setActiveTab('a-propos')">À Propos</a>
         </li>
-        <li :class="{ active: activeTab === 'projets' }">
-          <a href="#" @click="setActiveTab('projets')">Projets</a>
+        <li>
+          <a href="#projet" @click="setActiveTab('projets')">Projets</a>
         </li>
-        <li :class="{ active: activeTab === 'competences' }">
-          <a href="#" @click="setActiveTab('competences')">Compétences</a>
+        <li>
+          <a href="#competence" @click="setActiveTab('competences')"
+            >Compétences</a
+          >
         </li>
-        <li :class="{ active: activeTab === 'contact' }">
+        <li>
           <a href="#" @click="setActiveTab('contact')">Contact</a>
         </li>
       </ul>
@@ -35,17 +37,26 @@ export default {
 
   data() {
     return {
-      activeTab: "accueil", // Par défaut, l'onglet Accueil est actif
+      activeTab: "accueil",
     };
   },
   methods: {
     setActiveTab(tabName) {
       this.activeTab = tabName;
+      const targetElement = document.getElementById(tabName);
+      if (targetElement) {
+        const rect = targetElement.getBoundingClientRect();
+        window.scrollTo({
+          top: rect.top + window.scrollY,
+          behavior: "smooth",
+        });
+      }
     },
   },
+
   mounted() {
-    const menuHamburger = document.querySelector(".menu-hamburger");
-    const navLinks = document.querySelector(".nav-links");
+    const menuHamburger = this.$el.querySelector(".menu-hamburger");
+    const navLinks = this.$el.querySelector(".nav-links");
 
     menuHamburger.addEventListener("click", () => {
       navLinks.classList.toggle("mobile-menu");
@@ -63,6 +74,10 @@ export default {
 }
 .navbar a {
   color: white;
+  transition: color 0.3s ease;
+}
+.navbar a:hover {
+  color: #fdd995;
 }
 
 nav .logo {
@@ -91,27 +106,38 @@ nav .logo {
   right: 50px;
   width: 40px;
 }
+@keyframes slide {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 @media screen and (max-width: 972px) {
   .navbar {
     padding: 0;
+    z-index: 4000;
   }
   nav .logo img {
     position: absolute;
     top: 50px;
     left: 50px;
+    z-index: 4000;
   }
   .navbar .menu-hamburger {
     display: block;
     margin-top: 60px;
     margin-right: 20px;
+    z-index: 4000;
   }
   .nav-links {
     top: 0;
     left: 0;
     position: absolute;
     background-color: rgb(255, 255, 255, 0.2);
-    backdrop-filter: 7px;
+    backdrop-filter: blur(7px);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -119,6 +145,7 @@ nav .logo {
     align-items: center;
     margin-left: -100%;
     transition: all 0.5s ease;
+    z-index: 4000;
   }
   .nav-links.mobile-menu {
     margin-left: 0;

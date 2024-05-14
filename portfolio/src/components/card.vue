@@ -2,10 +2,10 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <p class="title">@WaelChb</p>
+        <p class="titlee">@WaelChb</p>
       </div>
       <div class="flip-card-back">
-        <p class="title">Développeur</p>
+        <p class="titlee">Développeur</p>
         <br />
         <p>
           Je suis un développeur passionné, constamment avide de nouvelles
@@ -29,9 +29,10 @@ export default {
   height: 254px;
   perspective: 1000px;
   font-family: sans-serif;
+  z-index: 4000;
 }
 
-.title {
+.titlee {
   font-size: 1.5em;
   font-weight: 900;
   text-align: center;
@@ -96,6 +97,7 @@ export default {
     height: 240px;
     perspective: 1000px;
     font-family: sans-serif;
+    z-index: 4000;
   }
 }
 </style>

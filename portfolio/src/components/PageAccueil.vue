@@ -1,15 +1,16 @@
 <template>
   <div class="container">
-    <section class="one">
+    <section id="accueil" class="sectionColor">
       <NavigationBar />
       <AccueilContenu />
     </section>
-    <section class="two">
+    <section id="a-propos" class="sectionColor">
       <APropos />
     </section>
-    <section class="three">
+    <section id="projet" class="sectionColor">
       <ProjetListe />
     </section>
+    <section id="competence" class="sectionColor"></section>
   </div>
 </template>
 
@@ -48,20 +49,13 @@ header {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-  scroll-behavior: smooth;
 }
 
 section {
   height: 100vh;
   scroll-snap-align: start;
 }
-.one {
-  background-color: #191d24;
-}
-.two {
-  background-color: #191d24;
-}
-.three {
+.sectionColor {
   background-color: #191d24;
 }
 </style>

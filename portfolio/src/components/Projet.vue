@@ -103,6 +103,14 @@ export default {
           height: "140px",
           width: "200px",
         },
+        {
+          title: "Site boulangerie :",
+          body: "En 2020, lors de mon stage <br>pour mon BTS, j'ai réalisé <br>mon premier projet web la <br>création d'un site web en <br>utilisant HTML, CSS et PHP.<br><br>",
+          img: "https://i.ibb.co/hH8bvps/Capture.png",
+          link: "https://linkorporation.com/",
+          height: "140px",
+          width: "200px",
+        },
       ],
     };
   },
