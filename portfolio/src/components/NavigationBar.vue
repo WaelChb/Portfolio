@@ -19,7 +19,7 @@
           >
         </li>
         <li>
-          <a href="#" @click="setActiveTab('contact')">Contact</a>
+          <a href="#contact" @click="setActiveTab('contact')">Contact</a>
         </li>
       </ul>
     </div>

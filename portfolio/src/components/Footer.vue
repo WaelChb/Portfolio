@@ -36,7 +36,7 @@
       </li>
       <li class="menu__item">
         <a class="menu__link" href="#a-propos" @click="setActiveTab('a-propos')"
-          >A propos</a
+          >À propos</a
         >
       </li>
       <li class="menu__item">
@@ -53,7 +53,9 @@
         >
       </li>
       <li class="menu__item">
-        <a class="menu__link" @click="setActiveTab('contact')">Contact</a>
+        <a class="menu__link" href="#contact" @click="setActiveTab('contact')"
+          >Contact</a
+        >
       </li>
     </ul>
     <p>&copy;WaelChurbaji.com | All Rights Reserved</p>

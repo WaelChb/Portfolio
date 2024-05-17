@@ -8,12 +8,13 @@
     <div class="contenu3">
       <div class="form-card1">
         <div class="form-card2">
-          <form class="form">
+          <form class="form" @submit.prevent="handleSubmit">
             <p class="form-heading">Contactez Moi</p>
 
             <div class="form-field">
               <input
-                required=""
+                v-model="formData.name"
+                required
                 placeholder="Nom"
                 class="input-field"
                 type="text"
@@ -22,7 +23,8 @@
 
             <div class="form-field">
               <input
-                required=""
+                v-model="formData.email"
+                required
                 placeholder="Email"
                 class="input-field"
                 type="email"
@@ -31,7 +33,8 @@
 
             <div class="form-field">
               <input
-                required=""
+                v-model="formData.subject"
+                required
                 placeholder="Sujet"
                 class="input-field"
                 type="text"
@@ -40,7 +43,8 @@
 
             <div class="form-field">
               <textarea
-                required=""
+                v-model="formData.message"
+                required
                 placeholder="Message"
                 cols="30"
                 rows="3"
@@ -48,7 +52,8 @@
               ></textarea>
             </div>
 
-            <button class="sendMessage-btn">Envoyer</button>
+            <button type="submit" class="sendMessage-btn">Envoyer</button>
+            <p v-if="message">{{ message }}</p>
           </form>
         </div>
       </div>
@@ -76,10 +81,47 @@
 
 <script>
 import FooterVue from "./Footer.vue";
+import axios from "axios";
 export default {
   name: "FormulaireContact",
   components: {
     FooterVue,
+  },
+  data() {
+    return {
+      formData: {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      },
+      message: "",
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      try {
+        // Envoi des données du formulaire au backend
+        const response = await axios.post(
+          "http://votre-backend-url/contact",
+          this.formData
+        );
+        this.message = response.data; // Message de succès ou d'erreur renvoyé par le backend
+        // Réinitialisation du formulaire après l'envoi réussi
+        if (response.status === 200) {
+          this.formData = {
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          };
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        this.message =
+          "Une erreur s'est produite lors de l'envoi du formulaire. ";
+      }
+    },
   },
 };
 </script>
@@ -112,21 +154,21 @@ export default {
 }
 
 ul {
-  list-style-type: none; /* Supprime les puces */
+  list-style-type: none;
   padding: 0;
 }
 
 li {
-  margin: 20px 0; /* Espacement entre les éléments */
-  font-size: 18px; /* Taille de la police */
+  margin: 20px 0;
+  font-size: 18px;
   display: flex;
-  align-items: center; /* Aligne les icônes avec le texte */
+  align-items: center;
 }
 
 i {
-  margin-right: 10px; /* Espacement entre l'icône et le texte */
-  font-size: 24px; /* Taille de l'icône */
-  color: #ccc; /* Couleur de l'icône */
+  margin-right: 10px;
+  font-size: 24px;
+  color: #ccc;
 }
 .form {
   display: flex;
