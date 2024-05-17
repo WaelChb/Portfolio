@@ -10,7 +10,9 @@
     <section id="projet" class="sectionColor">
       <ProjetListe />
     </section>
-    <section id="competence" class="sectionColor"></section>
+    <section id="competence" class="sectionColor">
+      <FormulaireContact />
+    </section>
   </div>
 </template>
 
@@ -19,6 +21,7 @@ import NavigationBar from "./NavigationBar.vue";
 import AccueilContenu from "./AccueilContenu.vue";
 import APropos from "./APropos.vue";
 import ProjetListe from "./Projet.vue";
+import FormulaireContact from "./Contact.vue";
 
 export default {
   name: "PageAccueil",
@@ -27,6 +30,7 @@ export default {
     AccueilContenu,
     APropos,
     ProjetListe,
+    FormulaireContact,
   },
 };
 </script>

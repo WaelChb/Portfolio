@@ -70,6 +70,7 @@ export default {
   padding: 50px;
   display: flex;
   justify-content: space-between;
+  /* position: absolute; */
   align-items: center;
 }
 .navbar a {
