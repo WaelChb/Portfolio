@@ -70,12 +70,17 @@
         <hr />
       </div>
     </div>
+    <FooterVue />
   </div>
 </template>
 
 <script>
+import FooterVue from "./Footer.vue";
 export default {
   name: "FormulaireContact",
+  components: {
+    FooterVue,
+  },
 };
 </script>
 
@@ -83,8 +88,6 @@ export default {
 .container5 {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 350px;
-  padding-left: 350px;
   width: 100%;
   display: flex;
   flex-direction: column;
