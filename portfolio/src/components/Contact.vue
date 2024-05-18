@@ -9,7 +9,7 @@
       <div class="form-card1">
         <div class="form-card2">
           <form class="form" @submit.prevent="handleSubmit">
-            <p class="form-heading">Contactez Moi</p>
+            <p class="form-heading">Contactez moi</p>
 
             <div class="form-field">
               <input
@@ -102,10 +102,7 @@ export default {
     async handleSubmit() {
       try {
         // Envoi des données du formulaire au backend
-        const response = await axios.post(
-          "http://votre-backend-url/contact",
-          this.formData
-        );
+        const response = await axios.post("/contact", this.formData);
         this.message = response.data; // Message de succès ou d'erreur renvoyé par le backend
         // Réinitialisation du formulaire après l'envoi réussi
         if (response.status === 200) {
