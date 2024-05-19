@@ -28,6 +28,7 @@
                 placeholder="Email"
                 class="input-field"
                 type="email"
+                autocomplete="off"
               />
             </div>
 
