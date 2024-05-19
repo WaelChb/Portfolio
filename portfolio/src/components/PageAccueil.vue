@@ -10,9 +10,8 @@
     <section id="projet" class="sectionColor">
       <ProjetListe />
     </section>
-    <section id="competence" class="sectionColor">
-      <FormulaireContact />
-    </section>
+    <section id="competence" class="sectionColor"><Competences /></section>
+    <section id="contact" class="sectionColor"><FormulaireContact /></section>
   </div>
 </template>
 
@@ -22,6 +21,7 @@ import AccueilContenu from "./AccueilContenu.vue";
 import APropos from "./APropos.vue";
 import ProjetListe from "./Projet.vue";
 import FormulaireContact from "./Contact.vue";
+import Competences from "./Competences.vue";
 
 export default {
   name: "PageAccueil",
@@ -31,6 +31,7 @@ export default {
     APropos,
     ProjetListe,
     FormulaireContact,
+    Competences,
   },
 };
 </script>
