@@ -70,4 +70,32 @@ export default {
   font-family: inherit;
   font-size: 16px;
 }
+@media (max-width: 600px) {
+  .card2 {
+    width: 100%;
+  }
+  .content {
+    padding: 8px;
+  }
+  .content svg {
+    width: 36px;
+    height: 36px;
+  }
+  .content .para {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    padding: 6px;
+  }
+  .content svg {
+    width: 32px;
+    height: 32px;
+  }
+  .content .para {
+    font-size: 12px;
+  }
+}
 </style>

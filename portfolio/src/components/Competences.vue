@@ -140,4 +140,21 @@ export default {
   transform: scale(1.1);
   background-color: rgba(249, 154, 84);
 }
+@media screen and (max-width: 768px) {
+  .cardSkills {
+    width: calc(50% - 20px);
+  }
+  .container6 {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container6 {
+    padding: 0 10px;
+  }
+  .cardSkills {
+    width: 100%;
+  }
+}
 </style>

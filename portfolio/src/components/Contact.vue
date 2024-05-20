@@ -257,4 +257,19 @@ i {
   transform: scale(0.98);
   border-radius: 20px;
 }
+@media screen and (max-width: 768px) {
+  .contenu3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coordonee {
+    margin-top: 20px;
+  }
+
+  .form-card1,
+  .form-card2 {
+    width: 100%;
+  }
+}
 </style>

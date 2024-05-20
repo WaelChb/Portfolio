@@ -59,4 +59,22 @@ export default {
 .centerP {
   text-align: center;
 }
+@media (max-width: 600px) {
+  .carousel {
+    padding: 10px;
+  }
+
+  .carousel p {
+    font-size: 10px;
+  }
+
+  .centerP {
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel {
+    margin-top: -30px;
+  }
+}
 </style>

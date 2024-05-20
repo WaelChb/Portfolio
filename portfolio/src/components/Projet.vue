@@ -283,4 +283,44 @@ h3 {
     padding: 10px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .container4 {
+    padding: 0 10px;
+    padding-right: 85px;
+    padding-left: 85px;
+  }
+  .contenu2 {
+    gap: 10px;
+  }
+  .card3 {
+    flex: 0 0 160px;
+    padding: 15px;
+  }
+  .card-title {
+    font-size: 1em;
+  }
+  .card-body {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container4 {
+    padding: 0 10px;
+    padding-right: 145px;
+    padding-left: 145px;
+  }
+  .contenu2 {
+    gap: 10px;
+  }
+  .card3 {
+    flex: 0 0 160px;
+    padding: 15px;
+  }
+  .card-title {
+    font-size: 1em;
+  }
+  .card-body {
+    font-size: 0.8em;
+  }
+}
 </style>

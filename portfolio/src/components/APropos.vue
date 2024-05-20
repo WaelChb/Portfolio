@@ -288,4 +288,24 @@ img {
     border: 1px solid rgba(0, 0, 0, 0);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container3 {
+    padding: 0 10px;
+  }
+
+  .contenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .titleee {
+    margin-top: 50px;
+  }
+}
 </style>

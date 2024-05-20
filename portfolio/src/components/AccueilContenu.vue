@@ -278,7 +278,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
   .container2 {
     padding-right: 20px;
     padding-left: 20px;
