@@ -76,6 +76,10 @@
         <hr />
       </div>
     </div>
+    <div class="footerTel">
+      <br />
+      <p>&copy;WaelChurbaji.com | All Rights Reserved</p>
+    </div>
     <FooterVue />
   </div>
 </template>
@@ -141,6 +145,10 @@ export default {
   display: flex;
   justify-content: space-between;
   gap: 40px;
+}
+
+.footerTel {
+  display: none;
 }
 .coordoneecoordonee {
   display: flex;
@@ -270,6 +278,12 @@ i {
   .form-card1,
   .form-card2 {
     width: 100%;
+  }
+  .contact-info {
+    margin-top: -60px;
+  }
+  .footerTel {
+    display: block;
   }
 }
 </style>
