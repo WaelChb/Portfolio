@@ -1,6 +1,6 @@
 <template>
   <div class="container5">
-    <div class="titre">
+    <div class="titre3">
       <h3>Me contacter</h3>
     </div>
     <br />
@@ -138,7 +138,7 @@ export default {
   align-items: center;
 }
 
-.titre {
+.titre3 {
   margin-top: 100px;
 }
 .contenu3 {
@@ -267,7 +267,7 @@ i {
 }
 
 @media screen and (max-width: 1366px) {
-  .titre {
+  .titre3 {
     margin-top: 10px;
   }
   .contenu3 {

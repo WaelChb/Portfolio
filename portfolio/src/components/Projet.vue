@@ -325,6 +325,9 @@ h3 {
     padding-right: 145px;
     padding-left: 145px;
   }
+  .title2 {
+    margin-top: 100px;
+  }
   .contenu2 {
     gap: 10px;
   }
