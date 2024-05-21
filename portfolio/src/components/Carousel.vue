@@ -72,7 +72,18 @@ export default {
     margin-top: 10px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
+  .carousel {
+    margin-top: -30px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .carousel {
+    margin-top: -10px;
+  }
+}
+@media screen and (max-width: 1024px) {
   .carousel {
     margin-top: -30px;
   }

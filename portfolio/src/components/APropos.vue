@@ -311,4 +311,43 @@ img {
     margin-top: 50px;
   }
 }
+
+@media screen and (max-width: 820px) {
+  .container3 {
+    padding: 0 10px;
+  }
+
+  .contenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .titleee {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container3 {
+    padding: 0 10px;
+  }
+
+  .contenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .titleee {
+    margin-top: 50px;
+  }
+}
 </style>

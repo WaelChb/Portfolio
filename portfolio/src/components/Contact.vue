@@ -279,10 +279,39 @@ i {
   .contenu3 {
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+  }
+  .titre3 {
+    margin-top: 100px;
   }
 
   .coordonee {
+    margin-top: 5px;
+  }
+
+  .form-card1,
+  .form-card2 {
+    width: 100%;
+  }
+  .contact-info {
+    margin-top: -60px;
+  }
+  .footerTel {
+    display: block;
+  }
+}
+@media screen and (max-width: 820px) {
+  .contenu3 {
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
+  }
+  .titre3 {
+    margin-top: 100px;
+  }
+
+  .coordonee {
+    margin-top: 5px;
   }
 
   .form-card1,

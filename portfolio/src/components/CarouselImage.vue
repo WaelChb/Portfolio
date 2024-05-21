@@ -108,4 +108,11 @@ img:nth-child(5) {
     width: 50%;
   }
 }
+@media (max-width: 820px) {
+  .pic-ctn {
+    height: 200px;
+    width: 50%;
+    margin-top: 86px;
+  }
+}
 </style>

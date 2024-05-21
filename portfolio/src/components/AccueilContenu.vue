@@ -287,6 +287,7 @@ h2 {
   .container2 {
     padding-right: 20px;
     padding-left: 20px;
+    margin-top: 60px;
   }
 
   .social {
@@ -310,11 +311,68 @@ h2 {
     height: auto;
   }
 }
+
 @media screen and (max-width: 768px) {
   .container2 {
     padding-right: 20px;
     padding-left: 20px;
     margin-top: 60px;
+  }
+
+  .social {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 270px;
+  }
+
+  .button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 820px) {
+  .container2 {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 100px;
+  }
+
+  .social {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 270px;
+  }
+
+  .button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container2 {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 100px;
   }
 
   .social {

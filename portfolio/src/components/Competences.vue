@@ -150,12 +150,33 @@ export default {
   }
 }
 
+@media screen and (max-width: 820px) {
+  .cardSkills {
+    width: calc(50% - 20px);
+  }
+  .container6 {
+    padding: 0 10px;
+  }
+  .titre2 {
+    margin-top: 100px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .cardSkills {
     width: calc(50% - 20px);
   }
   .container6 {
     padding: 0 10px;
+  }
+  .titre2 {
+    margin-top: 100px;
+  }
+  h3 {
+    font-size: 20px;
   }
 }
 

@@ -212,4 +212,17 @@ export default {
     margin: 5px;
   }
 }
+@media screen and (max-width: 820px) {
+  .footer {
+    display: none;
+  }
+  .menu__link {
+    font-size: 1rem;
+    margin: 5px;
+  }
+  .social-icon__link {
+    font-size: 1.5rem;
+    margin: 5px;
+  }
+}
 </style>
