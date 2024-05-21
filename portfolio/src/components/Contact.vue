@@ -265,6 +265,16 @@ i {
   transform: scale(0.98);
   border-radius: 20px;
 }
+
+@media screen and (max-width: 1366px) {
+  .titre {
+    margin-top: 10px;
+  }
+  .contenu3 {
+    margin-top: -60px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contenu3 {
     flex-direction: column;

@@ -241,6 +241,9 @@ img {
 }
 
 @media screen and (max-width: 1366px) {
+  .titleee {
+    margin-top: 20px;
+  }
   .main_card {
     position: relative;
     width: 77px;

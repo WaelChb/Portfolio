@@ -97,6 +97,11 @@ img:nth-child(4) {
 img:nth-child(5) {
   animation-delay: 8s;
 }
+@media screen and (max-width: 1366px) {
+  .pic-ctn {
+    margin-top: 6px;
+  }
+}
 @media (max-width: 768px) {
   .pic-ctn {
     height: 200px;

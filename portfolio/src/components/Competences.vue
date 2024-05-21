@@ -110,10 +110,9 @@ export default {
   padding: 6px 23px 9px;
   border-radius: 70em;
   margin: 8px 6px 8px 0;
-  margin-left: 0px;
-  position: relative;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 .tag__name::before,
@@ -140,6 +139,17 @@ export default {
   transform: scale(1.1);
   background-color: rgba(249, 154, 84);
 }
+
+@media screen and (max-width: 1366px) {
+  .container6 {
+    padding-right: 300px;
+    padding-left: 300px;
+  }
+  .titre2 {
+    margin-top: 10px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .cardSkills {
     width: calc(50% - 20px);
@@ -150,11 +160,11 @@ export default {
 }
 
 @media screen and (max-width: 576px) {
-  .container6 {
-    padding: 0 10px;
-  }
   .cardSkills {
     width: 100%;
+  }
+  .container6 {
+    padding: 0 10px;
   }
 }
 </style>

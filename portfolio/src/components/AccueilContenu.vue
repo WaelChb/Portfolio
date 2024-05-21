@@ -270,6 +270,11 @@ h2 {
   transform: scale(0.9);
   fill: #feeeab;
 }
+@media screen and (max-width: 1366px) {
+  .container2 {
+    margin-top: -90px;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .container2 {
@@ -282,6 +287,34 @@ h2 {
   .container2 {
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  .social {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 270px;
+  }
+
+  .button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container2 {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 60px;
   }
 
   .social {

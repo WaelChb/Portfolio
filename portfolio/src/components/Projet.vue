@@ -282,12 +282,28 @@ h3 {
     width: 200%;
     padding: 10px;
   }
+
+  .title2 {
+    margin-top: 0px;
+  }
+  .contenu2 {
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    height: 430px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .container4 {
     padding: 0 10px;
     padding-right: 85px;
     padding-left: 85px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .title2 {
+    margin-top: 100px;
   }
   .contenu2 {
     gap: 10px;

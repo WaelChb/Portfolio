@@ -192,6 +192,13 @@ export default {
     background-positon-x: 0px;
   }
 }
+@media screen and (max-width: 1366px) {
+  .footer {
+    margin-top: 40px;
+    width: 92%;
+    min-height: 0px;
+  }
+}
 @media screen and (max-width: 768px) {
   .footer {
     display: none;
