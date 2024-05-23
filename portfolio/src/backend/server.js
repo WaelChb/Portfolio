@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     user: "cwael2@outlook.fr",
-    pass: "Carrefour936",
+    pass: "process.env.EMAIL_PASSWORD",
   },
   tls: {
     ciphers: "SSLv3",
