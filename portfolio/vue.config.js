@@ -4,7 +4,7 @@ const webpack = require("webpack");
 module.exports = defineConfig({
   transpileDependencies: true,
   devServer: {
-    proxy: "http://localhost:3000",
+    proxy: "https://portfolio-two-chi-60.vercel.app/",
   },
   chainWebpack: (config) => {
     config.module
