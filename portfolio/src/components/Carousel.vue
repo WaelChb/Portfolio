@@ -50,6 +50,9 @@ export default {
 </script>
 
 <style scoped>
+.carousel {
+  padding: 50px;
+}
 .carousel p {
   display: none;
 }
