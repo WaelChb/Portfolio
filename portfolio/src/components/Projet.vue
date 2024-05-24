@@ -64,7 +64,7 @@ export default {
     return {
       cards: [
         {
-          title: "Filtre Web:  ",
+          title: "Filtre Web  ",
           body: "Projet professionnel réalisé <br>en C# .net MVC5 SQL et <br>Entity FrameWork, Filtre Web <br>est une application web <br>destiné aux opérateurs de <br> chez Ophtalmic Compagnie.",
           img: "https://i.ibb.co/1f7CCF9/Image1.jpg",
           link: "https://github.com/WaelChb/Filtre",
@@ -72,7 +72,7 @@ export default {
           width: "200px",
         },
         {
-          title: "Portfolio:",
+          title: "Portfolio",
           body: "Projet personnel, réalisé à <br>l'aide du framework Vue js <br>programmé de manière <br> dynamique.<br><br><br> ",
           img: "https://i.ibb.co/WpGDkwJ/Capture.png",
           link: "https://github.com/WaelChb/Portfolio",
@@ -80,7 +80,7 @@ export default {
           width: "200px",
         },
         {
-          title: "Uber Eats clone:",
+          title: "Uber Eats clone",
           body: "Projet personnel, clone <br>d'Uber Eats développé en<br> utilisant le framework Vue.js.<br> Inspiré par la popularité et<br> la fonctionnalité de <br>l'application originale. ",
           img: "https://i.ibb.co/37tg7Kq/Capture.png",
           link: "https://github.com/WaelChb/UbearEat-Clone",
@@ -88,7 +88,7 @@ export default {
           width: "200px",
         },
         {
-          title: "Baby Foot Connecté:",
+          title: "Baby Foot Connecté",
           body: "Le projet de baby-foot <br>connecté est un projet <br>scolaire développé en <br>Node.js pour l'api et pour le<br> coté objet connécté en <br>Arduino.",
           link: "https://github.com/WaelChb/Baby-Foot-Connecte/tree/Wael",
           img: "https://i.ibb.co/PMjGcQs/Capture.png",
@@ -96,7 +96,7 @@ export default {
           width: "200px",
         },
         {
-          title: "Licence développeur:",
+          title: "Licence développeur",
           body: "Le projet de fin d'études de <br>2024 est une plateforme web <br>dynamique et interactive <br>dédiée à mettre en valeur les <br>compétences et les <br>réalisations des étudiants",
           img: "https://i.ibb.co/zmNRmfK/Capture.png",
           link: "https://github.com/WaelChb/LPWD-2024-Web-Project",
@@ -104,7 +104,7 @@ export default {
           width: "200px",
         },
         {
-          title: "Site boulangerie :",
+          title: "Site boulangerie ",
           body: "En 2020, lors de mon stage <br>pour mon BTS, j'ai réalisé <br>mon premier projet web la <br>création d'un site web en <br>utilisant HTML, CSS et PHP.<br><br>",
           img: "https://i.ibb.co/hH8bvps/Capture.png",
           link: "https://linkorporation.com/",
