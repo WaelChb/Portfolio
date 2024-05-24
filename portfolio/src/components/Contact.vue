@@ -107,7 +107,10 @@ export default {
     async handleSubmit() {
       try {
         // Envoi des données du formulaire au backend
-        const response = await axios.post("/contact", this.formData);
+        const response = await axios.post(
+          "https://portfolio-7403.onrender.com/contact",
+          this.formData
+        );
         this.message = response.data; // Message de succès ou d'erreur renvoyé par le backend
         // Réinitialisation du formulaire après l'envoi réussi
         if (response.status === 200) {
