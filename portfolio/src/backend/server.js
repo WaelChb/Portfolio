@@ -37,7 +37,6 @@ app.post("/contact", (req, res) => {
     "Attempting to send email with the following options:",
     mailOptions
   );
-  console.log(process.env.EMAIL_PASSWORD, "mdp");
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
