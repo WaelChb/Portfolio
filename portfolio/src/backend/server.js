@@ -33,6 +33,11 @@ app.post("/contact", (req, res) => {
     text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
+  console.log(
+    "Attempting to send email with the following options:",
+    mailOptions
+  );
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error("Error sending email:", error);
