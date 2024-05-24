@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     user: "cwael2@outlook.fr",
-    pass: "Carrefour936",
+    pass: process.env.EMAIL_PASSWORD,
   },
   tls: {
     ciphers: "SSLv3",
@@ -37,6 +37,7 @@ app.post("/contact", (req, res) => {
     "Attempting to send email with the following options:",
     mailOptions
   );
+  console.log(process.env.EMAIL_PASSWORD, "mdp");
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
