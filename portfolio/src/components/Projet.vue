@@ -10,16 +10,17 @@
         <button class="scroll-button left" @click="scrollLeft">
           <img
             class="tourne"
-            src="https://www.nicepng.com/png/full/246-2461230_fleche-gauche-fleche-droite-carroubot1-carroubot2-flche-blanche.png"
+            src="https://mon-majordhome.com/wp-content/uploads/2023/09/fleche-blanche-bas.png"
             alt="Left Arrow"
-            width="25px"
+            width="35px"
           />
         </button>
         <button class="scroll-button right" @click="scrollRight">
           <img
-            src="https://www.nicepng.com/png/full/246-2461230_fleche-gauche-fleche-droite-carroubot1-carroubot2-flche-blanche.png"
+            class="tourne2"
+            src="https://mon-majordhome.com/wp-content/uploads/2023/09/fleche-blanche-bas.png"
             alt="Right Arrow"
-            width="25px"
+            width="35px"
           />
         </button>
       </div>
@@ -164,7 +165,10 @@ export default {
 }
 
 .tourne {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
+}
+.tourne2 {
+  transform: rotate(270deg);
 }
 
 .chevron {
